@@ -2,9 +2,9 @@
 {
     public class FizzBuzz
     {
-        public object Result()
+        public string Result()
         {
-            throw new System.NotImplementedException();
+            return "Fizz";
         }
     }
 }

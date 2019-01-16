@@ -11,6 +11,7 @@ namespace UnitTestProject6
         {
             var fizzBuzz = new FizzBuzz();
             var result = fizzBuzz.Result();
+            Assert.AreEqual("Fizz", result);
         }
     }
 }
