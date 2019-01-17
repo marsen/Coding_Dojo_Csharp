@@ -27,7 +27,7 @@ namespace UnitTestProject6
         {
             var fizzBuzz = new FizzBuzz();
             var result = fizzBuzz.GetResult(1);
-            Assert.AreEqual("1", result);
+            Assert.AreEqual("Buzz", result);
         }
     }
 
@@ -40,7 +40,12 @@ namespace UnitTestProject6
                 return "Fizz";
             }
 
-            return "Buzz";
+            if (i % 5 == 0)
+            {
+                return "Buzz";
+            }
+
+            return i.ToString();
         }
     }
 }
