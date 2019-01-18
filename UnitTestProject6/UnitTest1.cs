@@ -51,12 +51,17 @@ namespace UnitTestProject6
                 return "Fizz";
             }
 
-            if (i % 5 == 0)
+            if (IsBuzz(i))
             {
                 return "Buzz";
             }
 
             return i.ToString();
+        }
+
+        private static bool IsBuzz(int i)
+        {
+            return i % 5 == 0;
         }
 
         private static bool IsFizz(int i)
