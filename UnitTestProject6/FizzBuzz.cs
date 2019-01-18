@@ -4,6 +4,12 @@
     {
         public string GetResult(int i)
         {
+            if (i % 15 == 0)
+            {
+                return "FizzBuzz";
+            }
+
+
             if (i % 5 == 0)
             {
                 return "Buzz";
