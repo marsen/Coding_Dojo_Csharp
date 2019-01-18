@@ -41,7 +41,7 @@ namespace UnitTestProject6
     {
         public string GetResult(int i)
         {
-            if (i % 3 == 0 && i % 5 == 0)
+            if (IsFizzBuzz(i))
             {
                 return "FizzBuzz";
             }
@@ -57,6 +57,11 @@ namespace UnitTestProject6
             }
 
             return i.ToString();
+        }
+
+        private static bool IsFizzBuzz(int i)
+        {
+            return i % 3 == 0 && i % 5 == 0;
         }
     }
 }
