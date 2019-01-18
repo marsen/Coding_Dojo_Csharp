@@ -28,14 +28,29 @@ namespace UnitTestProject6
             var result = fizzBuzz.GetResult(4);
             Assert.AreEqual("4", result);
         }
+
+        [TestMethod]
+        public void v195_is_fizzbuzz()
+        {
+            var result = fizzBuzz.GetResult(195);
+            Assert.AreEqual("FizzBuzz", result);
+        }
     }
 
     public class FizzBuzz
     {
         public string GetResult(int i)
         {
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                return "FizzBuzz";
+            }
+
             if (i % 3 == 0)
+            {
                 return "Fizz";
+            }
+
             if (i % 5 == 0)
             {
                 return "Buzz";
