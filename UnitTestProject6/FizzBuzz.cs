@@ -4,23 +4,38 @@
     {
         public string GetResult(int i)
         {
-            if (i % 5 == 0 && i % 3 == 0)
+            if (IsFizzBuzz(i))
             {
                 return "FizzBuzz";
             }
 
 
-            if (i % 5 == 0)
+            if (IsBuzz(i))
             {
                 return "Buzz";
             }
 
-            if (i % 3 == 0)
+            if (IsFizz(i))
             {
                 return "Fizz";
             }
 
             return i.ToString();
+        }
+
+        private static bool IsFizz(int i)
+        {
+            return i % 3 == 0;
+        }
+
+        private static bool IsBuzz(int i)
+        {
+            return i % 5 == 0;
+        }
+
+        private static bool IsFizzBuzz(int i)
+        {
+            return i % 5 == 0 && i % 3 == 0;
         }
     }
 }
