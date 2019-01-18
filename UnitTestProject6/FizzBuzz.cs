@@ -35,7 +35,7 @@
 
         private static bool IsFizzBuzz(int i)
         {
-            return i % 5 == 0 && i % 3 == 0;
+            return IsFizz(i) && IsBuzz(i);
         }
     }
 }
