@@ -7,8 +7,11 @@ namespace UnitTestProject6
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void three_is_fizz()
         {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.GetResult(3);
+            Assert.AreEqual("Fizz", result);
         }
     }
 }
