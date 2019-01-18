@@ -19,7 +19,7 @@ namespace UnitTestProject6
     {
         public string GetResult(int i)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
