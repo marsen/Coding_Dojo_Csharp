@@ -46,7 +46,7 @@ namespace UnitTestProject6
                 return "FizzBuzz";
             }
 
-            if (i % 3 == 0)
+            if (IsFizz(i))
             {
                 return "Fizz";
             }
@@ -57,6 +57,11 @@ namespace UnitTestProject6
             }
 
             return i.ToString();
+        }
+
+        private static bool IsFizz(int i)
+        {
+            return i % 3 == 0;
         }
 
         private static bool IsFizzBuzz(int i)
