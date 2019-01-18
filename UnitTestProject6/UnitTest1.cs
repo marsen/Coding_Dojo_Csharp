@@ -71,7 +71,7 @@ namespace UnitTestProject6
 
         private static bool IsFizzBuzz(int i)
         {
-            return i % 3 == 0 && i % 5 == 0;
+            return IsBuzz(i) && IsFizz(i);
         }
     }
 }
