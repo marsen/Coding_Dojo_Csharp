@@ -1,39 +1,40 @@
-﻿namespace UnitTestProject6
+﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+
+namespace UnitTestProject6
 {
     public class FizzBuzz
     {
         public string GetResult(int i)
         {
-            if (IsFizzBuzz(i))
-            {
-                return "FizzBuzz";
-            }
+            var checkList = new List<Func<int, bool>>();
+            checkList.Add(IsFizzBuzz);
+            checkList.Add(IsBuzz);
+            checkList.Add(IsFizz);
 
-
-            if (IsBuzz(i))
+            foreach (var func in checkList)
             {
-                return "Buzz";
-            }
-
-            if (IsFizz(i))
-            {
-                return "Fizz";
+                if (func(i))
+                {
+                    return func.GetMethodInfo().Name.Remove(0, 2);
+                }
             }
 
             return i.ToString();
         }
 
-        private static bool IsFizz(int i)
+        private bool IsFizz(int i)
         {
             return i % 3 == 0;
         }
 
-        private static bool IsBuzz(int i)
+        private bool IsBuzz(int i)
         {
             return i % 5 == 0;
         }
 
-        private static bool IsFizzBuzz(int i)
+        private bool IsFizzBuzz(int i)
         {
             return IsFizz(i) && IsBuzz(i);
         }
