@@ -4,12 +4,17 @@
     {
         public string GetResult(int i)
         {
+            if (i % 3 == 0)
+            {
+                return "Fizz";
+            }
+
             if (i % 5 == 0)
             {
                 return "Buzz";
             }
 
-            return "Fizz";
+            return i.ToString();
         }
     }
 }
