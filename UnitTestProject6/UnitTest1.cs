@@ -23,8 +23,7 @@ namespace UnitTestProject6
         [TestMethod]
         public void five_is_buzz()
         {
-            var result = fizzBuzz.GetResult(5);
-            Assert.AreEqual("Buzz", result);
+            ResultShouldBe(5, "Buzz");
         }
 
         [TestMethod]
