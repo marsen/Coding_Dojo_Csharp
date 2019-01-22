@@ -11,6 +11,7 @@ namespace UnitTestProject6
         {
             FizzBizz fizzBizz = new FizzBizz();
             var result = fizzBizz.GetResult(3);
+            Assert.AreEqual("Fizz", result);
         }
     }
 
@@ -22,7 +23,7 @@ namespace UnitTestProject6
 
         public string GetResult(int i)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
