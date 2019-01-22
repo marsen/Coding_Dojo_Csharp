@@ -35,8 +35,7 @@ namespace UnitTestProject6
         [TestMethod]
         public void v195_is_fizzbuzz()
         {
-            var result = fizzBuzz.GetResult(195);
-            Assert.AreEqual("FizzBuzz", result);
+            ResultShouldBe(195, "FizzBuzz");
         }
     }
 }
