@@ -1,4 +1,7 @@
-﻿namespace UnitTestProject6
+﻿using System;
+using System.Collections.Generic;
+
+namespace UnitTestProject6
 {
     internal class FizzBuzz
     {

@@ -11,8 +11,13 @@ namespace UnitTestProject6
         [TestMethod]
         public void three_is_fizz()
         {
-            var result = fizzBuzz.GetResult(3);
-            Assert.AreEqual("Fizz", result);
+            ResultShouldBe(3, "Fizz");
+        }
+
+        private void ResultShouldBe(int param, string expected)
+        {
+            var result = fizzBuzz.GetResult(param);
+            Assert.AreEqual(expected, result);
         }
 
         [TestMethod]
