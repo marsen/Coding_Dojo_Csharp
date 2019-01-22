@@ -21,5 +21,12 @@ namespace UnitTestProject6
             var result = fizzBuzz.GetResult(5);
             Assert.AreEqual("Buzz", result);
         }
+
+        [TestMethod]
+        public void nothing_is_value()
+        {
+            var result = fizzBuzz.GetResult(4);
+            Assert.AreEqual("4", result);
+        }
     }
 }
