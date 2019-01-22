@@ -9,21 +9,9 @@ namespace UnitTestProject6
         [TestMethod]
         public void three_is_fizz()
         {
-            FizzBizz fizzBizz = new FizzBizz();
-            var result = fizzBizz.GetResult(3);
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.GetResult(3);
             Assert.AreEqual("Fizz", result);
-        }
-    }
-
-    internal class FizzBizz
-    {
-        public FizzBizz()
-        {
-        }
-
-        public string GetResult(int i)
-        {
-            return "Fizz";
         }
     }
 }
