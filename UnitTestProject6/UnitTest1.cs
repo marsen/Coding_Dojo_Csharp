@@ -26,5 +26,11 @@ namespace UnitTestProject6
         {
             ResultShouldBe(5, "Buzz");
         }
+
+        [TestMethod]
+        public void nothing_is_value()
+        {
+            ResultShouldBe(4, "4");
+        }
     }
 }
