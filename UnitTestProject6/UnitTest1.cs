@@ -4,11 +4,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject6
 {
     [TestClass]
-    public class UnitTest1
+    public class FooBarQixTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void one_is_1()
         {
+            FooBarQix fooBarQix = new FooBarQix();
+            var what = fooBarQix.What(1);
+            Assert.AreEqual("1", what);
         }
     }
 }
