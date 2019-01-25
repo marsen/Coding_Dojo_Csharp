@@ -22,6 +22,11 @@ namespace UnitTestProject6
                 return "BarBar";
             }
 
+            if (number % 7 == 0 && number.ToString().Contains(7.ToString()))
+            {
+                return "QixQix";
+            }
+
             return result;
         }
     }
