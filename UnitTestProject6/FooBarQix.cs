@@ -11,6 +11,11 @@ namespace UnitTestProject6
                 return "FooFoo";
             }
 
+            if (number % 5 == 0 && number.ToString().Contains(5.ToString()))
+            {
+                return "BarBar";
+            }
+
             return number.ToString();
         }
     }
