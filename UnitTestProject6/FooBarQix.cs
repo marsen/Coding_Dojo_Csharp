@@ -6,9 +6,15 @@ namespace UnitTestProject6
     {
         public string What(int number)
         {
-            if (number % 3 == 0 && number.ToString().Contains(3.ToString()))
+            string result = number.ToString();
+            if (number % 3 == 0)
             {
-                return "FooFoo";
+                result = "Foo";
+            }
+
+            if (number.ToString().Contains(3.ToString()))
+            {
+                result += "Foo";
             }
 
             if (number % 5 == 0 && number.ToString().Contains(5.ToString()))
@@ -16,7 +22,7 @@ namespace UnitTestProject6
                 return "BarBar";
             }
 
-            return number.ToString();
+            return result;
         }
     }
 }
