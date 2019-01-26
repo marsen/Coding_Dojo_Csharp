@@ -7,7 +7,7 @@
             IRule fizzBuzzRule = new FizzBuzzRule();
             if (fizzBuzzRule.Check(number))
             {
-                return "FizzBuzz";
+                return fizzBuzzRule.Result;
             }
 
             IRule buzzRule = new BuzzRule();
@@ -15,6 +15,7 @@
             {
                 return "Buzz";
             }
+
             IRule fizzRule = new FizzRule();
             if (fizzRule.Check(number))
             {
@@ -23,6 +24,5 @@
 
             return number.ToString();
         }
-
     }
 }

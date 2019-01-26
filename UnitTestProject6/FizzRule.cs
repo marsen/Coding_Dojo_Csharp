@@ -6,5 +6,7 @@
         {
             return number % 3 == 0;
         }
+
+        public string Result => "Fizz";
     }
 }
