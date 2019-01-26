@@ -1,0 +1,10 @@
+﻿namespace UnitTestProject6
+{
+    public class FizzBuzzRule
+    {
+        public bool Check(int number)
+        {
+            return number % 15 == 0;
+        }
+    }
+}

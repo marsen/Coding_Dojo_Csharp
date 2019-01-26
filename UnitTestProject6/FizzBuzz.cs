@@ -4,7 +4,8 @@
     {
         public string GetResult(int number)
         {
-            if (IsFizzBuzz(number))
+            var fizzBuzzRule = new FizzBuzzRule();
+            if (fizzBuzzRule.Check(number))
             {
                 return "FizzBuzz";
             }
@@ -30,11 +31,6 @@
         private bool IsBuzz(int number)
         {
             return number % 5 == 0;
-        }
-
-        private bool IsFizzBuzz(int number)
-        {
-            return number % 15 == 0;
         }
     }
 }
