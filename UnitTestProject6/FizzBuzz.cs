@@ -9,19 +9,17 @@
                 return "FizzBuzz";
             }
 
-            else if (IsBuzz(number))
+            if (IsBuzz(number))
             {
                 return "Buzz";
             }
 
-            else if (IsFizz(number))
+            if (IsFizz(number))
             {
                 return "Fizz";
             }
-            else
-            {
-                return number.ToString();
-            }
+
+            return number.ToString();
         }
 
         private bool IsFizz(int number)
