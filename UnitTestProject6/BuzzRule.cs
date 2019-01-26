@@ -1,6 +1,6 @@
 ﻿namespace UnitTestProject6
 {
-    public class BuzzRule
+    public class BuzzRule:IRule
     {
         public bool Check(int number)
         {
