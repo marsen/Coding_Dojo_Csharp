@@ -1,25 +1,21 @@
-﻿namespace UnitTestProject6
+﻿using System.Collections.Generic;
+
+namespace UnitTestProject6
 {
     public class FizzBuzz
     {
         public string GetResult(int number)
         {
-            IRule fizzBuzzRule = new FizzBuzzRule();
-            if (fizzBuzzRule.Check(number))
+            List<IRule> ruleList = new List<IRule>();
+            ruleList.Add(new FizzBuzzRule());
+            ruleList.Add(new BuzzRule());
+            ruleList.Add(new FizzRule());
+            foreach (IRule rule in ruleList)
             {
-                return fizzBuzzRule.Result;
-            }
-
-            IRule buzzRule = new BuzzRule();
-            if (buzzRule.Check(number))
-            {
-                return buzzRule.Result;
-            }
-
-            IRule fizzRule = new FizzRule();
-            if (fizzRule.Check(number))
-            {
-                return fizzRule.Result;
+                if (rule.Check(number))
+                {
+                    return rule.Result;
+                }
             }
 
             return number.ToString();
