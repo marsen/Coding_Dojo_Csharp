@@ -51,6 +51,7 @@
     <Compile Include="BuzzRule.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FizzBuzzRule.cs" />
+    <Compile Include="FizzRule.cs" />
     <Compile Include="IRule.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

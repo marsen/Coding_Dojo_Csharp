@@ -15,8 +15,8 @@
             {
                 return "Buzz";
             }
-
-            if (IsFizz(number))
+            IRule fizzRule = new FizzRule();
+            if (fizzRule.Check(number))
             {
                 return "Fizz";
             }
@@ -24,9 +24,5 @@
             return number.ToString();
         }
 
-        private bool IsFizz(int number)
-        {
-            return number % 3 == 0;
-        }
     }
 }
