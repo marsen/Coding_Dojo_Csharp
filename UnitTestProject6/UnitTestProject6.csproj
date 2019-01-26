@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuzzRule.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="FizzBuzzRule.cs" />
     <Compile Include="UnitTest1.cs" />

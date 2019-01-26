@@ -10,7 +10,8 @@
                 return "FizzBuzz";
             }
 
-            if (IsBuzz(number))
+            var buzzRule = new BuzzRule();
+            if (buzzRule.Check(number))
             {
                 return "Buzz";
             }
@@ -26,11 +27,6 @@
         private bool IsFizz(int number)
         {
             return number % 3 == 0;
-        }
-
-        private bool IsBuzz(int number)
-        {
-            return number % 5 == 0;
         }
     }
 }
