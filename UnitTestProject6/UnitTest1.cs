@@ -20,6 +20,12 @@ namespace UnitTestProject6
             ResultShouldBe(5, "Buzz");
         }
 
+        [TestMethod]
+        public void four_is_4()
+        {
+            ResultShouldBe(4, "4");
+        }
+
         private void ResultShouldBe(int number, string expected)
         {
             var result = _fizzBuzz.GetResult(number);
