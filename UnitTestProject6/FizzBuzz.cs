@@ -4,13 +4,13 @@
     {
         public string GetResult(int number)
         {
-            var fizzBuzzRule = new FizzBuzzRule();
+            IRule fizzBuzzRule = new FizzBuzzRule();
             if (fizzBuzzRule.Check(number))
             {
                 return "FizzBuzz";
             }
 
-            var buzzRule = new BuzzRule();
+            IRule buzzRule = new BuzzRule();
             if (buzzRule.Check(number))
             {
                 return "Buzz";
