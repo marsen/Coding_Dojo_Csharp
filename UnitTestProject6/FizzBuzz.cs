@@ -4,13 +4,16 @@ namespace UnitTestProject6
 {
     public class FizzBuzz
     {
+        readonly List<IRule> _ruleList = new List<IRule>
+        {
+            new FizzBuzzRule(),
+            new BuzzRule(),
+            new FizzRule()
+        };
+
         public string GetResult(int number)
         {
-            List<IRule> ruleList = new List<IRule>();
-            ruleList.Add(new FizzBuzzRule());
-            ruleList.Add(new BuzzRule());
-            ruleList.Add(new FizzRule());
-            foreach (IRule rule in ruleList)
+            foreach (var rule in _ruleList)
             {
                 if (rule.Check(number))
                 {
