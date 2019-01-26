@@ -6,12 +6,24 @@ namespace UnitTestProject6
     [TestClass]
     public class FizzBuzzTests
     {
+        readonly FizzBuzz _fizzBuzz = new FizzBuzz();
+
         [TestMethod]
         public void three_is_Fizz()
         {
-            FizzBuzz fizzBuzz = new FizzBuzz();
-            var result = fizzBuzz.GetResult(3);
-            Assert.AreEqual("Fizz", result);
+            ResultShouldBe(3, "Fizz");
+        }
+
+        [TestMethod]
+        public void five_is_Buzz()
+        {
+            ResultShouldBe(5, "Buzz");
+        }
+
+        private void ResultShouldBe(int number, string expected)
+        {
+            var result = _fizzBuzz.GetResult(number);
+            Assert.AreEqual(expected, result);
         }
     }
 }
