@@ -13,13 +13,13 @@
             IRule buzzRule = new BuzzRule();
             if (buzzRule.Check(number))
             {
-                return "Buzz";
+                return buzzRule.Result;
             }
 
             IRule fizzRule = new FizzRule();
             if (fizzRule.Check(number))
             {
-                return "Fizz";
+                return fizzRule.Result;
             }
 
             return number.ToString();
