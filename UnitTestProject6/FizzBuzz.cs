@@ -4,22 +4,39 @@
     {
         public string GetResult(int number)
         {
-            if (number % 15 == 0)
+            if (IsFizzBuzz(number))
             {
                 return "FizzBuzz";
             }
 
-            if (number % 5 == 0)
+            else if (IsBuzz(number))
             {
                 return "Buzz";
             }
 
-            if (number % 3 == 0)
+            else if (IsFizz(number))
             {
                 return "Fizz";
             }
+            else
+            {
+                return number.ToString();
+            }
+        }
 
-            return number.ToString();
+        private bool IsFizz(int number)
+        {
+            return number % 3 == 0;
+        }
+
+        private bool IsBuzz(int number)
+        {
+            return number % 5 == 0;
+        }
+
+        private bool IsFizzBuzz(int number)
+        {
+            return number % 15 == 0;
         }
     }
 }
