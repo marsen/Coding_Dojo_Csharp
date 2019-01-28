@@ -27,6 +27,11 @@ namespace UnitTestProject6
                 return "QixQix";
             }
 
+            if (number == 10)
+            {
+                result = "Bar";
+            }
+
             return result;
         }
     }
