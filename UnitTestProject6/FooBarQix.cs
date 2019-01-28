@@ -27,9 +27,14 @@ namespace UnitTestProject6
                 result += "Bar";
             }
 
-            if (number % 7 == 0 && number.ToString().Contains(7.ToString()))
+            if (number % 7 == 0)
             {
-                return "QixQix";
+                result = "Qix";
+            }
+
+            if (number.ToString().Contains(7.ToString()))
+            {
+                result += "Qix";
             }
 
 
