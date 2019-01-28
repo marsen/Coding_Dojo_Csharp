@@ -61,5 +61,13 @@ namespace UnitTestProject6
             var what = fooBarQix.What(8);
             Assert.AreEqual("8", what);
         }
+
+        [TestMethod]
+        public void nine_is_foo()
+        {
+            FooBarQix fooBarQix = new FooBarQix();
+            var what = fooBarQix.What(9);
+            Assert.AreEqual("Foo", what);
+        }
     }
 }
