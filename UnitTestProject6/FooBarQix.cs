@@ -17,9 +17,14 @@ namespace UnitTestProject6
                 result += "Foo";
             }
 
-            if (number % 5 == 0 && number.ToString().Contains(5.ToString()))
+            if (number % 5 == 0)
             {
-                return "BarBar";
+                result = "Bar";
+            }
+
+            if (number.ToString().Contains(5.ToString()))
+            {
+                result += "Bar";
             }
 
             if (number % 7 == 0 && number.ToString().Contains(7.ToString()))
