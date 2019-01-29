@@ -20,7 +20,7 @@ namespace UnitTestProject6
             {
                 if (number % item == 0)
                 {
-                    result = "Foo";
+                    result = rule[item];
                 }
             }
 
