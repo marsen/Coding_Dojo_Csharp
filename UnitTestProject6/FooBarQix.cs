@@ -6,7 +6,8 @@ namespace UnitTestProject6
     {
         public string What(int number)
         {
-            string result = number.ToString();
+            string numberString = number.ToString();
+            string result = string.Empty;
             if (number % 3 == 0)
             {
                 result = "Foo";
@@ -38,7 +39,7 @@ namespace UnitTestProject6
             }
 
 
-            return result;
+            return string.IsNullOrEmpty(result) ? numberString : result;
         }
     }
 }
