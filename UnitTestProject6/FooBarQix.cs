@@ -22,25 +22,12 @@ namespace UnitTestProject6
                 {
                     result = rule[item];
                 }
+
+                if (number.ToString().Contains(item.ToString()))
+                {
+                    result += rule[item];
+                }
             }
-
-            if (number.ToString().Contains(3.ToString()))
-            {
-                result += "Foo";
-            }
-
-
-            if (number.ToString().Contains(5.ToString()))
-            {
-                result += "Bar";
-            }
-
-
-            if (number.ToString().Contains(7.ToString()))
-            {
-                result += "Qix";
-            }
-
 
             return string.IsNullOrEmpty(result) ? numberString : result;
         }
