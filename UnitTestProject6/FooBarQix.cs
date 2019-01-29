@@ -1,16 +1,27 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace UnitTestProject6
 {
     public class FooBarQix
     {
+        private Dictionary<int, string> rule = new Dictionary<int, string>()
+        {
+            {3, "Foo"},
+            {5, "Bar"},
+            {7, "Qix"},
+        };
+
         public string What(int number)
         {
             string numberString = number.ToString();
             string result = string.Empty;
-            if (number % 3 == 0)
+            foreach (var item in rule.Keys)
             {
-                result = "Foo";
+                if (number % item == 0)
+                {
+                    result = "Foo";
+                }
             }
 
             if (number.ToString().Contains(3.ToString()))
