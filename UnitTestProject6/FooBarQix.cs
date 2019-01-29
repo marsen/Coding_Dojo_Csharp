@@ -29,20 +29,12 @@ namespace UnitTestProject6
                 result += "Foo";
             }
 
-            if (number % 5 == 0)
-            {
-                result = "Bar";
-            }
 
             if (number.ToString().Contains(5.ToString()))
             {
                 result += "Bar";
             }
 
-            if (number % 7 == 0)
-            {
-                result = "Qix";
-            }
 
             if (number.ToString().Contains(7.ToString()))
             {
