@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace UnitTestProject6
@@ -22,7 +23,10 @@ namespace UnitTestProject6
                 {
                     result += rule[item];
                 }
+            }
 
+            foreach (var item in rule.Keys.Reverse())
+            {
                 foreach (char c in numberString)
                 {
                     if (c.ToString() == item.ToString())
