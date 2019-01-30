@@ -23,7 +23,7 @@ namespace UnitTestProject6
                     result += rule[item];
                 }
 
-                if (number.ToString().Contains(item.ToString()))
+                if (numberString.Contains(item.ToString()))
                 {
                     result += rule[item];
                 }
