@@ -102,7 +102,7 @@ namespace UnitTestProject6
             Assert.AreEqual("FooQix", what);
         }
 
-        //[TestMethod]
+        [TestMethod]
         public void thirtythree_is_foofoofoo()
         {
             FooBarQix fooBarQix = new FooBarQix();

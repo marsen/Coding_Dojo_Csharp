@@ -23,9 +23,12 @@ namespace UnitTestProject6
                     result += rule[item];
                 }
 
-                if (numberString.Contains(item.ToString()))
+                foreach (char c in numberString)
                 {
-                    result += rule[item];
+                    if (c.ToString() == item.ToString())
+                    {
+                        result += rule[item];
+                    }
                 }
             }
 
