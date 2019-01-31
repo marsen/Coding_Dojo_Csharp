@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -6,11 +7,11 @@ namespace UnitTestProject6
 {
     public class FooBarQix
     {
-        private Dictionary<int, string> rule = new Dictionary<int, string>()
+        private Dictionary<int, Func<string, string>> rule = new Dictionary<int, Func<string, string>>()
         {
-            {3, "Foo"},
-            {5, "Bar"},
-            {7, "Qix"},
+            {3, p => p + "Foo"},
+            {5, p => p + "Bar"},
+            {7, p => p + "Qix"},
         };
 
         public string What(int number)
@@ -21,18 +22,17 @@ namespace UnitTestProject6
             {
                 if (number % item == 0)
                 {
-                    result += rule[item];
+                    //result += rule[item];
+                    result = rule[item].Invoke(result);
                 }
             }
 
             foreach (char c in numberString)
             {
-                foreach (var item in rule.Keys)
+                var tempKey = c.ToString();
+                if (rule.Keys.Contains(Convert.ToInt32(tempKey)))
                 {
-                    if (c.ToString() == item.ToString())
-                    {
-                        result += rule[item];
-                    }
+                    result = rule[Convert.ToInt32(tempKey)].Invoke(result);
                 }
             }
 
