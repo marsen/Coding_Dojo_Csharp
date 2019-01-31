@@ -22,7 +22,6 @@ namespace UnitTestProject6
             {
                 if (number % item == 0)
                 {
-                    //result += rule[item];
                     result = rule[item].Invoke(result);
                 }
             }
