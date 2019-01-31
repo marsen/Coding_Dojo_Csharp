@@ -25,9 +25,9 @@ namespace UnitTestProject6
                 }
             }
 
-            foreach (var item in rule.Keys.Reverse())
+            foreach (char c in numberString)
             {
-                foreach (char c in numberString)
+                foreach (var item in rule.Keys)
                 {
                     if (c.ToString() == item.ToString())
                     {
