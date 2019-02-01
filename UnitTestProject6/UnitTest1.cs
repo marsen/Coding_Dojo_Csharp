@@ -5,20 +5,28 @@ namespace UnitTestProject6
     [TestClass]
     public class FizzBuzzTest
     {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        readonly FizzBuzz _fizzBuzz = new FizzBuzz();
 
         [TestMethod]
         public void three_is_Fizz()
         {
-            var what = fizzBuzz.What(3);
-            Assert.AreEqual("Fizz", what);
+            int number = 3;
+            string expected = "Fizz";
+            ResultShouldBe(number, expected);
+        }
+
+        private void ResultShouldBe(int number, string expected)
+        {
+            var what = _fizzBuzz.What(number);
+            Assert.AreEqual(expected, what);
         }
 
         [TestMethod]
         public void five_is_Buzz()
         {
-            var what = fizzBuzz.What(5);
-            Assert.AreEqual("Buzz", what);
+            int number = 5;
+            string expected = "Buzz";
+            ResultShouldBe(number, expected);
         }
     }
 }
