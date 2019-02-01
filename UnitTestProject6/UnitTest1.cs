@@ -36,5 +36,13 @@ namespace UnitTestProject6
             string expected = "4";
             ResultShouldBe(number, expected);
         }
+
+        [TestMethod]
+        public void v195_is_FizzBuzz()
+        {
+            int number = 195;
+            string expected = "FizzBuzz";
+            ResultShouldBe(number, expected);
+        }
     }
 }
