@@ -10,9 +10,7 @@ namespace UnitTestProject6
         [TestMethod]
         public void three_is_Fizz()
         {
-            int number = 3;
-            string expected = "Fizz";
-            ResultShouldBe(number, expected);
+            ResultShouldBe(3, "Fizz");
         }
 
         private void ResultShouldBe(int number, string expected)
@@ -24,25 +22,19 @@ namespace UnitTestProject6
         [TestMethod]
         public void five_is_Buzz()
         {
-            int number = 5;
-            string expected = "Buzz";
-            ResultShouldBe(number, expected);
+            ResultShouldBe(5, "Buzz");
         }
 
         [TestMethod]
         public void nothing_is_Value()
         {
-            int number = 4;
-            string expected = "4";
-            ResultShouldBe(number, expected);
+            ResultShouldBe(4, "4");
         }
 
         [TestMethod]
         public void v195_is_FizzBuzz()
         {
-            int number = 195;
-            string expected = "FizzBuzz";
-            ResultShouldBe(number, expected);
+            ResultShouldBe(195, "FizzBuzz");
         }
     }
 }
