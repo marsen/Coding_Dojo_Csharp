@@ -4,7 +4,7 @@ namespace UnitTestProject6
 {
     public class FizzBuzz
     {
-        public string what(int i)
+        public string What(int i)
         {
             if (i % 5 == 0)
             {
