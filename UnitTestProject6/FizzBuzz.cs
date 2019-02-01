@@ -6,6 +6,11 @@ namespace UnitTestProject6
     {
         public string what(int i)
         {
+            if (i % 5 == 0)
+            {
+                return "Buzz";
+            }
+
             return "Fizz";
         }
     }
