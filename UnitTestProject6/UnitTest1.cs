@@ -28,5 +28,13 @@ namespace UnitTestProject6
             string expected = "Buzz";
             ResultShouldBe(number, expected);
         }
+
+        [TestMethod]
+        public void nothing_is_Value()
+        {
+            int number = 4;
+            string expected = "4";
+            ResultShouldBe(number, expected);
+        }
     }
 }

@@ -11,7 +11,12 @@ namespace UnitTestProject6
                 return "Buzz";
             }
 
-            return "Fizz";
+            if (i % 3 == 0)
+            {
+                return "Fizz";
+            }
+
+            return i.ToString();
         }
     }
 }
