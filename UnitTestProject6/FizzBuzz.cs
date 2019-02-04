@@ -8,7 +8,8 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            if (IsDivisibleBy3(number))
+            var fizzRule = new FizzRule();
+            if (fizzRule.Check(number))
             {
                 result += "Fizz";
             }
