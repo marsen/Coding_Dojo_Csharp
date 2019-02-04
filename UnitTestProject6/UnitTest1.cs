@@ -4,11 +4,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject6
 {
     [TestClass]
-    public class UnitTest1
+    public class FizzBuzzTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void one_is_1()
         {
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var result = fizzBuzz.GetResult(1);
+            Assert.AreEqual("1", result);
         }
     }
 }
