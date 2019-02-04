@@ -8,19 +8,14 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            if (IsDivisibleBy15(number))
+            if (IsDivisibleBy3(number))
             {
-                return "FizzBuzz";
+                result += "Fizz";
             }
 
             if (IsDivisibleBy5(number))
             {
-                result = "Buzz";
-            }
-
-            if (IsDivisibleBy3(number))
-            {
-                result = "Fizz";
+                result += "Buzz";
             }
 
             if (string.IsNullOrEmpty(result))
