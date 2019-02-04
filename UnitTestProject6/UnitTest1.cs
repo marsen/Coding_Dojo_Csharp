@@ -35,5 +35,12 @@ namespace UnitTestProject6
             var result = _fizzBuzz.GetResult(4);
             Assert.AreEqual("4", result);
         }
+
+        [TestMethod]
+        public void five_is_5()
+        {
+            var result = _fizzBuzz.GetResult(5);
+            Assert.AreEqual("Buzz", result);
+        }
     }
 }
