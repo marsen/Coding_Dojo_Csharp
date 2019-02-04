@@ -8,13 +8,14 @@ namespace UnitTestProject6
         private readonly List<IRule> _rules = new List<IRule>
         {
             new FizzRule(),
-            new BuzzRule()
+            new BuzzRule(),
         };
 
         public string GetResult(int number)
         {
             string result = string.Empty;
-            foreach (var rule in _rules)
+            var myRules = _rules;
+            foreach (var rule in myRules)
             {
                 if (rule.Check(number))
                 {
