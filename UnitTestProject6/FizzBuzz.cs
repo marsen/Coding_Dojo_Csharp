@@ -26,10 +26,6 @@ namespace UnitTestProject6
             return result;
         }
 
-        private bool IsDivisibleBy15(int number)
-        {
-            return IsDivisibleBy3(number) && IsDivisibleBy5(number);
-        }
 
         private bool IsDivisibleBy5(int number)
         {
