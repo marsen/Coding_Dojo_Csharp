@@ -15,8 +15,7 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            var myRules = _rules;
-            myRules
+            _rules
                 .Where(r => r.Check(number))
                 .ToList()
                 .ForEach(n => result += n.Word);
