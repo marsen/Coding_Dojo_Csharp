@@ -1,10 +1,13 @@
-﻿namespace UnitTestProject6
+﻿using System;
+using System.Collections.Generic;
+
+namespace UnitTestProject6
 {
     public class FizzBuzz
     {
         public string GetResult(int number)
         {
-            if (IsDivisibleBy3(number) && IsDivisibleBy5(number))
+            if (IsDivisibleBy15(number))
             {
                 return "FizzBuzz";
             }
@@ -22,12 +25,17 @@
             return number.ToString();
         }
 
-        private static bool IsDivisibleBy5(int number)
+        private bool IsDivisibleBy15(int number)
+        {
+            return IsDivisibleBy3(number) && IsDivisibleBy5(number);
+        }
+
+        private bool IsDivisibleBy5(int number)
         {
             return number % 5 == 0;
         }
 
-        private static bool IsDivisibleBy3(int number)
+        private bool IsDivisibleBy3(int number)
         {
             return number % 3 == 0;
         }
