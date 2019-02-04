@@ -4,22 +4,32 @@
     {
         public string GetResult(int number)
         {
-            if (number % 5 == 0 & number % 3 == 0)
+            if (IsDivisibleBy3(number) && IsDivisibleBy5(number))
             {
                 return "FizzBuzz";
             }
 
-            if (number % 5 == 0)
+            if (IsDivisibleBy5(number))
             {
                 return "Buzz";
             }
 
-            if (number % 3 == 0)
+            if (IsDivisibleBy3(number))
             {
                 return "Fizz";
             }
 
             return number.ToString();
+        }
+
+        private static bool IsDivisibleBy5(int number)
+        {
+            return number % 5 == 0;
+        }
+
+        private static bool IsDivisibleBy3(int number)
+        {
+            return number % 3 == 0;
         }
     }
 }
