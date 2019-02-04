@@ -18,12 +18,7 @@ namespace UnitTestProject6
                 result += "Buzz";
             }
 
-            if (string.IsNullOrEmpty(result))
-            {
-                return number.ToString();
-            }
-
-            return result;
+            return string.IsNullOrEmpty(result) ? number.ToString() : result;
         }
 
 
