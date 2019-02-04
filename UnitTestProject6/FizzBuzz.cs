@@ -10,16 +10,12 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            var fizzRule = new FizzRule();
-            if (fizzRule.Check(number))
+            foreach (var rule in _rules)
             {
-                result += fizzRule.Word;
-            }
-
-            var buzzRule = new BuzzRule();
-            if (buzzRule.Check(number))
-            {
-                result += buzzRule.Word;
+                if (rule.Check(number))
+                {
+                    result += rule.Word;
+                }
             }
 
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
