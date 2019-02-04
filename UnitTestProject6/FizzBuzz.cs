@@ -11,13 +11,13 @@ namespace UnitTestProject6
             var fizzRule = new FizzRule();
             if (fizzRule.Check(number))
             {
-                result += "Fizz";
+                result += fizzRule.Word;
             }
 
             var buzzRule = new BuzzRule();
             if (buzzRule.Check(number))
             {
-                result += "Buzz";
+                result += buzzRule.Word;
             }
 
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
