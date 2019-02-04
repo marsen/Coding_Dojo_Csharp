@@ -1,6 +1,6 @@
 ﻿namespace UnitTestProject6
 {
-    public class FizzRule
+    public class FizzRule : IRule
     {
         public bool Check(int number)
         {
