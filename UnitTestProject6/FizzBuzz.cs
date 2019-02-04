@@ -14,23 +14,13 @@ namespace UnitTestProject6
                 result += "Fizz";
             }
 
-            if (IsDivisibleBy5(number))
+            var buzzRule = new BuzzRule();
+            if (buzzRule.Check(number))
             {
                 result += "Buzz";
             }
 
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
-        }
-
-
-        private bool IsDivisibleBy5(int number)
-        {
-            return number % 5 == 0;
-        }
-
-        private bool IsDivisibleBy3(int number)
-        {
-            return number % 3 == 0;
         }
     }
 }
