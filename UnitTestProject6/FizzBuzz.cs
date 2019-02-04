@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace UnitTestProject6
 {
@@ -14,13 +15,10 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            var myRules = _rules;
+            var myRules = _rules.Where(r => r.Check(number));
             foreach (var rule in myRules)
             {
-                if (rule.Check(number))
-                {
-                    result += rule.Word;
-                }
+                result += rule.Word;
             }
 
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
