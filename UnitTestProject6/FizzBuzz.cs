@@ -7,6 +7,7 @@ namespace UnitTestProject6
     {
         public string GetResult(int number)
         {
+            string result = string.Empty;
             if (IsDivisibleBy15(number))
             {
                 return "FizzBuzz";
@@ -14,15 +15,20 @@ namespace UnitTestProject6
 
             if (IsDivisibleBy5(number))
             {
-                return "Buzz";
+                result = "Buzz";
             }
 
             if (IsDivisibleBy3(number))
             {
-                return "Fizz";
+                result = "Fizz";
             }
 
-            return number.ToString();
+            if (string.IsNullOrEmpty(result))
+            {
+                return number.ToString();
+            }
+
+            return result;
         }
 
         private bool IsDivisibleBy15(int number)
