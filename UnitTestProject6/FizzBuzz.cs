@@ -5,6 +5,8 @@ namespace UnitTestProject6
 {
     public class FizzBuzz
     {
+        private List<IRule> _rules = new List<IRule> {new FizzRule(), new BuzzRule()};
+
         public string GetResult(int number)
         {
             string result = string.Empty;
