@@ -15,12 +15,11 @@ namespace UnitTestProject6
         public string GetResult(int number)
         {
             string result = string.Empty;
-            var myRules = _rules.Where(r => r.Check(number));
-            foreach (var rule in myRules)
-            {
-                result += rule.Word;
-            }
-
+            var myRules = _rules;
+            myRules
+                .Where(r => r.Check(number))
+                .ToList()
+                .ForEach(n => result += n.Word);
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
         }
     }
