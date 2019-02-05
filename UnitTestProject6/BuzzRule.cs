@@ -8,5 +8,10 @@
         {
             return number % 5 == 0;
         }
+
+        public string Apply(string input)
+        {
+            return input += Word;
+        }
     }
 }

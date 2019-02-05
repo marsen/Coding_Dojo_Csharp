@@ -8,5 +8,10 @@
         {
             return number % 3 == 0;
         }
+
+        public string Apply(string input)
+        {
+            return input += this.Word;
+        }
     }
 }

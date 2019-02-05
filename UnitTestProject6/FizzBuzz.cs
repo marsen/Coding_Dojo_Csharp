@@ -18,7 +18,7 @@ namespace UnitTestProject6
             _rules
                 .Where(r => r.Check(number))
                 .ToList()
-                .ForEach(n => result += n.Word);
+                .ForEach(n => result = n.Apply(result));
             return string.IsNullOrEmpty(result) ? number.ToString() : result;
         }
     }

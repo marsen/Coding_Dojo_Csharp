@@ -4,5 +4,6 @@
     {
         string Word { get; }
         bool Check(int number);
+        string Apply(string input);
     }
 }
