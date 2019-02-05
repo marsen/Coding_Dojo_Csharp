@@ -19,7 +19,8 @@ namespace UnitTestProject6
                 .Where(r => r.Check(number))
                 .ToList()
                 .ForEach(n => result = n.Apply(result));
-            return string.IsNullOrEmpty(result) ? number.ToString() : result;
+            var normalRule = new NormalRule();
+            return normalRule.Apply(number, result);
         }
     }
 }
