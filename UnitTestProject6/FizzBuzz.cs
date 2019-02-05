@@ -18,7 +18,7 @@ namespace UnitTestProject6
             _rules
                 .Where(r => r.Check(number))
                 .ToList()
-                .ForEach(n => result = n.Apply(result));
+                .ForEach(n => result = n.Apply(number,result));
             var normalRule = new NormalRule();
             return normalRule.Apply(number, result);
         }

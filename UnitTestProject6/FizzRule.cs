@@ -9,7 +9,7 @@
             return number % 3 == 0;
         }
 
-        public string Apply(string input)
+        public string Apply(int number, string input)
         {
             return input += this.Word;
         }
