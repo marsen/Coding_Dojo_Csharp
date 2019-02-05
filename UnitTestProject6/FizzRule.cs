@@ -2,16 +2,16 @@
 {
     public class FizzRule : IRule
     {
-        public string Word => "Fizz";
+        private string Word => "Fizz";
 
-        public bool Check(int number)
+        private bool Check(int number)
         {
             return number % 3 == 0;
         }
 
         public string Apply(int number, string input)
         {
-            return input += this.Word;
+            return Check(number) ? input += this.Word : input;
         }
     }
 }

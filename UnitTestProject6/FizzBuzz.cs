@@ -10,17 +10,15 @@ namespace UnitTestProject6
         {
             new FizzRule(),
             new BuzzRule(),
+            new NormalRule()
         };
 
         public string GetResult(int number)
         {
             string result = string.Empty;
             _rules
-                .Where(r => r.Check(number))
-                .ToList()
-                .ForEach(n => result = n.Apply(number,result));
-            var normalRule = new NormalRule();
-            return normalRule.Apply(number, result);
+                .ForEach(n => result = n.Apply(number, result));
+            return result;
         }
     }
 }

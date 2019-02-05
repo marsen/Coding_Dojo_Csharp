@@ -11,7 +11,7 @@
 
         public string Apply(int number, string input)
         {
-            return input += Word;
+            return Check(number) ? input += Word : input;
         }
     }
 }
