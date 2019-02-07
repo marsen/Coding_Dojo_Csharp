@@ -15,7 +15,7 @@ namespace UnitTestProject6
 
         public string GetResult(int number)
         {
-            return _rules.Aggregate(string.Empty, (r, n) => n.Apply(number, r));
+            return _rules.Aggregate(string.Empty, (input, rule) => rule.Apply(input, number));
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IRule
     {
-        string Apply(int number, string input);
+        string Apply(string input, int number);
     }
 }

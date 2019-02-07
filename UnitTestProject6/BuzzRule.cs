@@ -2,7 +2,7 @@
 {
     public class BuzzRule : IRule
     {
-        public string Apply(int number, string input)
+        public string Apply(string input, int number)
         {
             return number % 5 == 0 ? input += "Buzz" : input;
         }

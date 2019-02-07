@@ -2,9 +2,9 @@
 {
     public class NormalRule : IRule
     {
-        public string Apply(int number, string result)
+        public string Apply(string input, int number)
         {
-            return string.IsNullOrEmpty(result) ? number.ToString() : result;
+            return string.IsNullOrEmpty(input) ? number.ToString() : input;
         }
     }
 }
