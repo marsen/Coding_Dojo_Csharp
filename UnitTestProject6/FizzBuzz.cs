@@ -15,10 +15,7 @@ namespace UnitTestProject6
 
         public string GetResult(int number)
         {
-            string result = string.Empty;
-            _rules
-                .ForEach(n => result = n.Apply(number, result));
-            return result;
+            return _rules.Aggregate(string.Empty, (r, n) => n.Apply(number, r));
         }
     }
 }
