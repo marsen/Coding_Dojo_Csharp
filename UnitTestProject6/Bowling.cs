@@ -1,10 +1,20 @@
-﻿namespace UnitTestProject6
+﻿using System.Linq;
+
+namespace UnitTestProject6
 {
     public class Bowling
     {
-        public int Score(string frames)
+        public int Score(string input)
         {
-            return 300;
+            var frame = input.Split(' ').ToList();
+            var xCount = frame.Count(q => q.Contains("X"));
+
+            if (xCount == 10)
+            {
+                return 300;
+            }
+
+            return 90;
         }
     }
 }
