@@ -6,7 +6,7 @@ namespace UnitTestProject6
     {
         public int Score(string input)
         {
-            var frame = input.Split(' ').ToList();
+            var frame = input.Split(',').ToList();
             var xCount = frame.Count(q => q.Contains("X"));
 
             if (xCount == 10)

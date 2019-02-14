@@ -10,7 +10,7 @@ namespace UnitTestProject6
         public void all_strike_is_300()
         {
             Bowling bowling = new Bowling();
-            var score = bowling.Score("X X X X X X X X X XXX");
+            var score = bowling.Score("X ,X ,X ,X ,X ,X ,X ,X ,X ,XXX");
             Assert.AreEqual(300, score);
         }
 
@@ -18,7 +18,7 @@ namespace UnitTestProject6
         public void ten_9miss_is_90()
         {
             Bowling bowling = new Bowling();
-            var score = bowling.Score("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-");
+            var score = bowling.Score("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-");
             Assert.AreEqual(90, score);
         }
     }
