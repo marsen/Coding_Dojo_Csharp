@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Versioning;
 
 namespace UnitTestProject6
 {
@@ -7,9 +9,14 @@ namespace UnitTestProject6
         public int Score(string input)
         {
             var frame = input.Split(',').ToList();
-            var xCount = frame.Count(q => q.Contains("X"));
+            int xCount = 0;
+            foreach (var item in frame)
+            {
+                xCount += item.ToCharArray().Count(x => x.Equals('X'));
+            }
 
-            if (xCount == 10)
+
+            if (xCount == 12)
             {
                 return 300;
             }
