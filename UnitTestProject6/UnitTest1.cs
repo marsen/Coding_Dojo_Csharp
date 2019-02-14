@@ -21,5 +21,13 @@ namespace UnitTestProject6
             var score = bowling.Score("9-,9-,9-,9-,9-,9-,9-,9-,9-,9-");
             Assert.AreEqual(90, score);
         }
+
+        [TestMethod]
+        public void ten_5spare_5_is_150()
+        {
+            Bowling bowling = new Bowling();
+            var score = bowling.Score("5/,5/,5/,5/,5/,5/,5/,5/,5/,5/5");
+            Assert.AreEqual(150, score);
+        }
     }
 }
