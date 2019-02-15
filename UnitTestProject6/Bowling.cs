@@ -7,19 +7,33 @@ namespace UnitTestProject6
 {
     public class Bowling
     {
+        Dictionary<string, int> map = new Dictionary<string, int>()
+        {
+            {"X", 10},
+            {"-", 0},
+        };
+
         public int Score(string input)
         {
+            var frameScore = new List<int>();
             var frame = input.Split(',').ToList();
             int xCount = 0;
-            foreach (var item in frame)
-            {
-                xCount += item.ToCharArray().Count(x => x.Equals('X'));
-            }
+            int result = 0;
+            int xScore = 0;
 
+//            frame.ForEach(x => { frameScore.Add(map[x.Substring(0, 1)]); });
+
+            for (var i = 0; i < frame.Count; i++)
+            {
+                var item = frame[i];
+//                var itemScore = frameScore[i];
+                xCount += item.ToCharArray().Count(x => x.Equals('X'));
+                xScore += 30;
+            }
 
             if (xCount == 12)
             {
-                return 300;
+                return xScore;
             }
 
             int spareCount = 0;
