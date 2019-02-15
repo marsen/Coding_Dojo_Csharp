@@ -78,10 +78,10 @@ imap z,P <Esc>"0Pa
 :imap jj <Esc>
 :nmap <BS> a<BS>
 :nmap zh ^
-:nmap hh ^
+":nmap hh ^
 :imap zh <Esc>^i
 :nmap zl $
-:nmap ll $
+":nmap ll $
 :imap zl <End>
 :nmap hc ^C
 :nmap zb bcw
