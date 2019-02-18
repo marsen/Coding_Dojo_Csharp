@@ -9,7 +9,7 @@ namespace UnitTestProject6
     {
         Dictionary<string, int> map = new Dictionary<string, int>()
         {
-            {"X", 10},
+            {"X", 30},
             {"9", 9},
             {"8", 8},
             {"7", 7},
@@ -30,14 +30,15 @@ namespace UnitTestProject6
             int result = 0;
             int xScore = 0;
 
-//            frame.ForEach(x => { frameScore.Add(map[x.Substring(0, 1)]); });
+            frame.ForEach(x => { frameScore.Add(map[x.Substring(0, 1)]); });
 
             for (var i = 0; i < frame.Count; i++)
             {
                 var item = frame[i];
-//                var itemScore = frameScore[i];
+                var itemScore = frameScore[i];
                 xCount += item.ToCharArray().Count(x => x.Equals('X'));
-                xScore += 30;
+                //xScore += 30;
+                xScore += itemScore;
             }
 
             if (xCount == 12)
