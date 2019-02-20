@@ -39,6 +39,14 @@ namespace UnitTestProject6
         }
 
         [TestMethod]
+        public void two_1_miss_is_2()
+        {
+            Bowling bowling = new Bowling();
+            var score = bowling.Score("1-,1-");
+            Assert.AreEqual(2, score);
+        }
+
+        [TestMethod]
         public void two_1_1_is_4()
         {
             Bowling bowling = new Bowling();
