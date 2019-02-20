@@ -30,7 +30,7 @@ namespace UnitTestProject6
             Assert.AreEqual(150, score);
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void ten_strike_is_270()
         {
             Bowling bowling = new Bowling();
