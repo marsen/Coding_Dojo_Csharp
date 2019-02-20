@@ -70,6 +70,14 @@ namespace UnitTestProject6
             Assert.AreEqual(4, score);
         }
 
+        [TestMethod]
+        public void two_miss_1_is_2()
+        {
+            Bowling bowling = new Bowling();
+            var score = bowling.Score("-1,-1");
+            Assert.AreEqual(2, score);
+        }
+
         //[TestMethod]
         public void ten_strike_is_270()
         {
