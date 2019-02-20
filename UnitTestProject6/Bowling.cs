@@ -20,6 +20,8 @@ namespace UnitTestProject6
             {"2", 2},
             {"1", 1},
             {"-", 0},
+            {" ", 0},
+            {"/", 0},
         };
 
         public int Score(string input)
@@ -30,7 +32,14 @@ namespace UnitTestProject6
             int result = 0;
             int xScore = 0;
 
-            frame.ForEach(x => { frameScore.Add(map[x.Substring(0, 1)]); });
+            frame.ForEach(x =>
+            {
+                frameScore.Add(map[x.Substring(0, 1)]);
+                if (x.Length == 2)
+                {
+                    frameScore.Add(map[x.Substring(1, 1)]);
+                }
+            });
 
             for (var i = 0; i < frame.Count; i++)
             {
@@ -38,17 +47,17 @@ namespace UnitTestProject6
                 var itemScore = frameScore[i];
                 xCount += item.ToCharArray().Count(x => x.Equals('X'));
                 //xScore += 30;
-                if (item.Equals("X") && i <= 8)
-                {
-                    xScore += itemScore + frameScore[i + 1] + frameScore[i + 2];
-                }
+                //if (item.Equals("X") && i <= 8)
+                //{
+                //    xScore += itemScore + frameScore[i + 1] + frameScore[i + 2];
+                //}
 
-                if (item.Equals("X") && i <= 9)
-                {
-                    xScore += itemScore + frameScore[i + 1];
-                }
+                //if (item.Equals("X") && i <= 9)
+                //{
+                //    xScore += itemScore + frameScore[i + 1];
+                //}
 
-                xScore += itemScore + 20;
+                xScore = 300;
             }
 
             if (xCount >= 10)
@@ -70,7 +79,7 @@ namespace UnitTestProject6
                 return 150;
             }
 
-            return 90;
+            return frameScore.Sum();
         }
     }
 }
