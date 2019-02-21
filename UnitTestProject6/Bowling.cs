@@ -21,7 +21,6 @@ namespace UnitTestProject6
             {"1", 1},
             {"-", 0},
             {" ", 0},
-            {"/", 10},
         };
 
         public int Score(string input)
