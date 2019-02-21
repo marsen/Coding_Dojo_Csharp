@@ -87,6 +87,15 @@ namespace UnitTestProject6
             Assert.AreEqual(13, score);
         }
 
+
+        [TestMethod]
+        public void frames_1_spare_2_1_is_15()
+        {
+            Bowling bowling = new Bowling();
+            var score = bowling.Score("1/,21");
+            Assert.AreEqual(15, score);
+        }
+
         //[TestMethod]
         public void ten_strike_is_270()
         {

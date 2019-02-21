@@ -31,13 +31,32 @@ namespace UnitTestProject6
             int xCount = 0;
             int result = 0;
             int xScore = 0;
-
+            bool hasBounus = false;
             frame.ForEach(x =>
             {
-                frameScore.Add(map[x.Substring(0, 1)]);
+                var firstBall = x.Substring(0, 1);
+                if (hasBounus)
+                {
+                    frameScore.Add(map[firstBall] * 2);
+                    hasBounus = false;
+                }
+                else
+                {
+                    frameScore.Add(map[firstBall]);
+                }
+
                 if (x.Length == 2)
                 {
-                    frameScore.Add(map[x.Substring(1, 1)]);
+                    var secondBall = x.Substring(1, 1);
+                    if (secondBall == "/")
+                    {
+                        hasBounus = true;
+                        frameScore.Add(10 - frameScore.Last());
+                    }
+                    else
+                    {
+                        frameScore.Add(map[secondBall]);
+                    }
                 }
             });
 
