@@ -35,7 +35,8 @@ namespace UnitTestProject6
                 var firstBall = x.Substring(0, 1);
                 if (hasBonus)
                 {
-                    frameScore.Add(map[firstBall] * 2);
+                    frameScore.Add(map[firstBall]);
+                    frameScore.Add(map[firstBall]);
                     hasBonus = false;
                 }
                 else
