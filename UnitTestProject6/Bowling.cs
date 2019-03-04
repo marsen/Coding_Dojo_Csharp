@@ -57,19 +57,14 @@ namespace UnitTestProject6
                         frameScore.Add(map[secondBall]);
                     }
                 }
+
+                xCount += x.ToCharArray().Count(y => y.Equals('X'));
             });
 
-            for (var i = 0; i < frame.Count; i++)
-            {
-                var item = frame[i];
-                xCount += item.ToCharArray().Count(x => x.Equals('X'));
-
-                xScore = 300;
-            }
 
             if (xCount >= 10)
             {
-                return xScore;
+                return 300;
             }
 
             int spareCount = 0;
