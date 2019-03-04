@@ -62,18 +62,7 @@ namespace UnitTestProject6
             for (var i = 0; i < frame.Count; i++)
             {
                 var item = frame[i];
-                var itemScore = frameScore[i];
                 xCount += item.ToCharArray().Count(x => x.Equals('X'));
-                //xScore += 30;
-                //if (item.Equals("X") && i <= 8)
-                //{
-                //    xScore += itemScore + frameScore[i + 1] + frameScore[i + 2];
-                //}
-
-                //if (item.Equals("X") && i <= 9)
-                //{
-                //    xScore += itemScore + frameScore[i + 1];
-                //}
 
                 xScore = 300;
             }
