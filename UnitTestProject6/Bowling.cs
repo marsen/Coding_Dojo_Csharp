@@ -28,8 +28,6 @@ namespace UnitTestProject6
             var frameScore = new List<int>();
             var frame = input.Split(',').ToList();
             int xCount = 0;
-            int xScore = 0;
-            int spareCount = 0;
             bool hasBonus = false;
             frame.ForEach(x =>
             {
@@ -59,23 +57,21 @@ namespace UnitTestProject6
                     }
                 }
 
-                xCount += x.ToCharArray().Count(y => y.Equals('X'));
-
-                if (x.Contains("5/"))
+                if (x.Length == 3)
                 {
-                    spareCount++;
+                    var thirdBall = x.Substring(2, 1);
+
+                    frameScore.Add(map[thirdBall]);
+                    frameScore.Add(map[thirdBall]);
                 }
+
+                xCount += x.ToCharArray().Count(y => y.Equals('X'));
             });
 
 
             if (xCount >= 10)
             {
                 return 300;
-            }
-
-            if (spareCount == 10)
-            {
-                return 150;
             }
 
             return frameScore.Sum();
