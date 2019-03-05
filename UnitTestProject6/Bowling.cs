@@ -29,6 +29,7 @@ namespace UnitTestProject6
             var frame = input.Split(',').ToList();
             int xCount = 0;
             int xScore = 0;
+            int spareCount = 0;
             bool hasBonus = false;
             frame.ForEach(x =>
             {
@@ -59,21 +60,17 @@ namespace UnitTestProject6
                 }
 
                 xCount += x.ToCharArray().Count(y => y.Equals('X'));
+
+                if (x.Contains("5/"))
+                {
+                    spareCount++;
+                }
             });
 
 
             if (xCount >= 10)
             {
                 return 300;
-            }
-
-            int spareCount = 0;
-            foreach (var item in frame)
-            {
-                if (item.Contains("5/"))
-                {
-                    spareCount++;
-                }
             }
 
             if (spareCount == 10)
