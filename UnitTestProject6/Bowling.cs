@@ -32,15 +32,11 @@ namespace UnitTestProject6
             frame.ForEach(x =>
             {
                 var firstBall = x.Substring(0, 1);
+                frameScore.Add(map[firstBall]);
                 if (hasBonus)
                 {
                     frameScore.Add(map[firstBall]);
-                    frameScore.Add(map[firstBall]);
                     hasBonus = false;
-                }
-                else
-                {
-                    frameScore.Add(map[firstBall]);
                 }
 
                 if (x.Length == 2)
