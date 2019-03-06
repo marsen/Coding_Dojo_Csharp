@@ -41,17 +41,14 @@ namespace UnitTestProject6
                     bonus = 0;
                 }
 
-                //if (x.Length == 2)
+                var secondBall = x.Substring(1, 1);
+                if (secondBall == "/")
                 {
-                    var secondBall = x.Substring(1, 1);
-                    if (secondBall == "/")
-                    {
-                        bonus = 10 - firstScore;
-                    }
-                    else
-                    {
-                        frameScore.Add(map[secondBall]);
-                    }
+                    bonus = 10 - firstScore;
+                }
+                else
+                {
+                    frameScore.Add(map[secondBall]);
                 }
 
                 if (x.Length == 3)
