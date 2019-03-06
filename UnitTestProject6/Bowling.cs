@@ -45,7 +45,7 @@ namespace UnitTestProject6
                     if (secondBall == "/")
                     {
                         hasBonus = true;
-                        frameScore.Add(10 - frameScore.Last());
+                        frameScore.Add(10 - firstScore);
                     }
                     else
                     {
