@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Versioning;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -29,23 +30,32 @@ namespace UnitTestProject6
             var frame = input.Split(',').ToList();
             int xCount = 0;
             bool hasBonus = false;
+            int bonus = 0;
             frame.ForEach(x =>
             {
                 var firstScore = map[x.Substring(0, 1)];
                 frameScore.Add(firstScore);
-                if (hasBonus)
+                if (bonus != 0)
                 {
-                    frameScore.Add(firstScore);
-                    hasBonus = false;
+                    bonus += firstScore;
+                    frameScore.Add(bonus);
+                    bonus = 0;
                 }
+
+                //if (hasBonus)
+                //{
+                //    frameScore.Add(firstScore);
+                //    hasBonus = false;
+                //}
 
                 if (x.Length == 2)
                 {
                     var secondBall = x.Substring(1, 1);
                     if (secondBall == "/")
                     {
-                        hasBonus = true;
-                        frameScore.Add(10 - firstScore);
+                        bonus = 10 - firstScore;
+                        //hasBonus = true;
+                        //frameScore.Add(10 - firstScore);
                     }
                     else
                     {
