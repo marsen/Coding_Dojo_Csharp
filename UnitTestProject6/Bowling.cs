@@ -29,7 +29,6 @@ namespace UnitTestProject6
             var frameScore = new List<int>();
             var frame = input.Split(',').ToList();
             int xCount = 0;
-            bool hasBonus = false;
             int bonus = 0;
             frame.ForEach(x =>
             {
@@ -42,20 +41,12 @@ namespace UnitTestProject6
                     bonus = 0;
                 }
 
-                //if (hasBonus)
-                //{
-                //    frameScore.Add(firstScore);
-                //    hasBonus = false;
-                //}
-
                 if (x.Length == 2)
                 {
                     var secondBall = x.Substring(1, 1);
                     if (secondBall == "/")
                     {
                         bonus = 10 - firstScore;
-                        //hasBonus = true;
-                        //frameScore.Add(10 - firstScore);
                     }
                     else
                     {
