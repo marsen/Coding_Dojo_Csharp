@@ -31,11 +31,11 @@ namespace UnitTestProject6
             bool hasBonus = false;
             frame.ForEach(x =>
             {
-                var firstBall = x.Substring(0, 1);
-                frameScore.Add(map[firstBall]);
+                var firstScore = map[x.Substring(0, 1)];
+                frameScore.Add(firstScore);
                 if (hasBonus)
                 {
-                    frameScore.Add(map[firstBall]);
+                    frameScore.Add(firstScore);
                     hasBonus = false;
                 }
 
