@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Runtime.Versioning;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -14,13 +15,30 @@ namespace UnitTestProject6
             var frame = input.Split(',').ToList();
             int xCount = 0;
             int bonus = 0;
+            int result = 0;
+            foreach (var item in frameScoreList)
+            {
+                result += item.FirstScore;
+
+                if (bonus != 0)
+                {
+                    bonus += item.FirstScore;
+                    result += bonus;
+                    bonus = 0;
+                }
+
+                result += item.SecondScore;
+            }
+
+            var hasBouns = false;
+            var preSecondScore = 0;
             frame.ForEach(x =>
             {
                 var firstScore = Frame.ScoreMap[x.Substring(0, 1)];
                 frameScore.Add(firstScore);
-                if (bonus != 0)
+                if (hasBouns)
                 {
-                    bonus += firstScore;
+                    bonus = firstScore + preSecondScore;
                     frameScore.Add(bonus);
                     bonus = 0;
                 }
@@ -28,7 +46,8 @@ namespace UnitTestProject6
                 var secondBall = x.Substring(1, 1);
                 if (secondBall == "/")
                 {
-                    bonus = 10 - firstScore;
+                    preSecondScore = 10 - firstScore;
+                    hasBouns = true;
                 }
                 else
                 {
