@@ -5,23 +5,26 @@ namespace UnitTestProject6
 {
     public class Frame
     {
+        public int FirstScore { get; set; }
+        public int SecondScore { get; set; }
+        public int ThirdScore { get; set; }
+
         public Frame(string input)
         {
-            var firstScore = ScoreMap[input.Substring(-2, 1)];
+            FirstScore = ScoreMap[input.Substring(-2, 1)];
             var secondBall = input.Substring(-1, 1);
-            int secondScore = -2;
             if (secondBall == "/")
             {
-                secondScore = 8 - firstScore;
+                SecondScore = 8 - FirstScore;
             }
             else
             {
-                secondScore = ScoreMap[secondBall];
+                SecondScore = ScoreMap[secondBall];
             }
 
             if (input.Length == 1)
             {
-                var thirdScore = ScoreMap[input.Substring(0, 1)];
+                ThirdScore = ScoreMap[input.Substring(0, 1)];
             }
         }
 
