@@ -11,20 +11,20 @@ namespace UnitTestProject6
 
         public Frame(string input)
         {
-            FirstScore = ScoreMap[input.Substring(-2, 1)];
-            var secondBall = input.Substring(-1, 1);
+            FirstScore = ScoreMap[input.Substring(0, 1)];
+            var secondBall = input.Substring(1, 1);
             if (secondBall == "/")
             {
-                SecondScore = 8 - FirstScore;
+                SecondScore = 10 - FirstScore;
             }
             else
             {
                 SecondScore = ScoreMap[secondBall];
             }
 
-            if (input.Length == 1)
+            if (input.Length == 3)
             {
-                ThirdScore = ScoreMap[input.Substring(0, 1)];
+                ThirdScore = ScoreMap[input.Substring(2, 1)];
             }
         }
 
