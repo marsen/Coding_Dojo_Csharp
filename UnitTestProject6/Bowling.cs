@@ -16,27 +16,29 @@ namespace UnitTestProject6
             int xCount = 0;
             int bonus = 0;
             int result = 0;
-            foreach (var item in frameScoreList)
-            {
-                result += item.FirstScore;
+            //foreach (var item in frameScoreList)
+            //{
+            //    result += item.FirstScore;
 
-                if (bonus != 0)
-                {
-                    bonus += item.FirstScore;
-                    result += bonus;
-                    bonus = 0;
-                }
+            //    if (bonus != 0)
+            //    {
+            //        bonus += item.FirstScore;
+            //        result += bonus;
+            //        bonus = 0;
+            //    }
 
-                result += item.SecondScore;
-            }
+            //    result += item.SecondScore;
+            //}
 
-            var hasBouns = false;
+            var hasBonus = false;
             var preSecondScore = 0;
             frame.ForEach(x =>
             {
-                var firstScore = Frame.ScoreMap[x.Substring(0, 1)];
+                //var firstScore = Frame.ScoreMap[x.Substring(0, 1)];
+                var f = new Frame(x);
+                var firstScore = f.FirstScore;
                 frameScore.Add(firstScore);
-                if (hasBouns)
+                if (hasBonus)
                 {
                     bonus = firstScore + preSecondScore;
                     frameScore.Add(bonus);
@@ -47,7 +49,7 @@ namespace UnitTestProject6
                 if (secondBall == "/")
                 {
                     preSecondScore = 10 - firstScore;
-                    hasBouns = true;
+                    hasBonus = true;
                 }
                 else
                 {
