@@ -10,26 +10,11 @@ namespace UnitTestProject6
     {
         public int Score(string input)
         {
-            var frameScoreList = input.Split(',').Select(x => new Frame(x));
             var frameScore = new List<int>();
             var frame = input.Split(',').ToList();
             int xCount = 0;
             int bonus = 0;
             int result = 0;
-            //foreach (var item in frameScoreList)
-            //{
-            //    result += item.FirstScore;
-
-            //    if (bonus != 0)
-            //    {
-            //        bonus += item.FirstScore;
-            //        result += bonus;
-            //        bonus = 0;
-            //    }
-
-            //    result += item.SecondScore;
-            //}
-
             var hasBonus = false;
             var preSecondScore = 0;
             frame.ForEach(x =>
