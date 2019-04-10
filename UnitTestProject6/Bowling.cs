@@ -37,6 +37,7 @@ namespace UnitTestProject6
                 var f = new Frame(x);
                 var firstScore = f.FirstScore;
                 var secondScore = f.SecondScore;
+                var thirdScore = f.ThirdScore;
                 frameScore.Add(firstScore);
                 if (hasBonus)
                 {
@@ -60,8 +61,10 @@ namespace UnitTestProject6
                 {
                     var thirdBall = x.Substring(2, 1);
 
-                    frameScore.Add(Frame.ScoreMap[thirdBall]);
-                    frameScore.Add(Frame.ScoreMap[thirdBall]);
+                    frameScore.Add(thirdScore);
+                    frameScore.Add(thirdScore);
+                    //frameScore.Add(Frame.ScoreMap[thirdBall]);
+                    //frameScore.Add(Frame.ScoreMap[thirdBall]);
                 }
 
                 xCount += x.ToCharArray().Count(y => y.Equals('X'));
