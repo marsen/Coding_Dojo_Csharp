@@ -59,12 +59,8 @@ namespace UnitTestProject6
 
                 if (x.Length == 3)
                 {
-                    var thirdBall = x.Substring(2, 1);
-
                     frameScore.Add(thirdScore);
                     frameScore.Add(thirdScore);
-                    //frameScore.Add(Frame.ScoreMap[thirdBall]);
-                    //frameScore.Add(Frame.ScoreMap[thirdBall]);
                 }
 
                 xCount += x.ToCharArray().Count(y => y.Equals('X'));
