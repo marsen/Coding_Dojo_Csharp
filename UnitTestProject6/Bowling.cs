@@ -34,9 +34,9 @@ namespace UnitTestProject6
             var preSecondScore = 0;
             frame.ForEach(x =>
             {
-                //var firstScore = Frame.ScoreMap[x.Substring(0, 1)];
                 var f = new Frame(x);
                 var firstScore = f.FirstScore;
+                var secondScore = f.SecondScore;
                 frameScore.Add(firstScore);
                 if (hasBonus)
                 {
@@ -53,7 +53,7 @@ namespace UnitTestProject6
                 }
                 else
                 {
-                    frameScore.Add(Frame.ScoreMap[secondBall]);
+                    frameScore.Add(secondScore);
                 }
 
                 if (x.Length == 3)
