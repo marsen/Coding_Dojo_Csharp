@@ -16,7 +16,8 @@ namespace UnitTestProject6
             int bonus = 0;
             int result = 0;
             var hasBonus = false;
-            var preSecondScore = 0;
+            //var preSecondScore = 0;
+            Frame preFrame = null;
             frame.ForEach(x =>
             {
                 var f = new Frame(x);
@@ -26,14 +27,13 @@ namespace UnitTestProject6
                 frameScore.Add(firstScore);
                 if (hasBonus)
                 {
-                    bonus = firstScore + preSecondScore;
+                    bonus = firstScore + preFrame.SecondScore;
                     frameScore.Add(bonus);
                     bonus = 0;
                 }
 
                 if (f.IsSpare)
                 {
-                    preSecondScore = secondScore;
                     hasBonus = true;
                 }
                 else
@@ -48,6 +48,7 @@ namespace UnitTestProject6
                 }
 
                 xCount += x.ToCharArray().Count(y => y.Equals('X'));
+                preFrame = f;
             });
 
 
