@@ -34,7 +34,6 @@ namespace UnitTestProject6
                 var secondBall = x.Substring(1, 1);
                 if (secondBall == "/")
                 {
-                    //preSecondScore = 10 - firstScore;
                     preSecondScore = secondScore;
                     hasBonus = true;
                 }
