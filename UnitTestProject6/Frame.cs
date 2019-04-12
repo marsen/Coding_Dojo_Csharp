@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace UnitTestProject6
 {
@@ -11,9 +10,12 @@ namespace UnitTestProject6
 
         public bool IsSpare { get; set; }
 
+        public bool IsStrike { get; set; }
+
         public Frame(string input)
         {
             FirstScore = ScoreMap[input.Substring(0, 1)];
+            IsStrike = FirstScore == 10;
             var secondBall = input.Substring(1, 1);
             if (secondBall == "/")
             {
@@ -46,6 +48,5 @@ namespace UnitTestProject6
             {"-", 0},
             {" ", 0},
         };
-
     }
 }
