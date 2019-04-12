@@ -15,7 +15,6 @@ namespace UnitTestProject6
             int xCount = 0;
             int bonus = 0;
             int result = 0;
-            var hasBonus = false;
             Frame preFrame = null;
             frame.ForEach(x =>
             {
@@ -33,7 +32,6 @@ namespace UnitTestProject6
 
                 if (f.IsSpare)
                 {
-                    hasBonus = true;
                 }
                 else
                 {
