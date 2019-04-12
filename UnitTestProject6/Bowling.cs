@@ -30,10 +30,7 @@ namespace UnitTestProject6
                     bonus = 0;
                 }
 
-                if (f.IsSpare)
-                {
-                }
-                else
+                if (f.IsSpare == false)
                 {
                     frameScore.Add(secondScore);
                 }
