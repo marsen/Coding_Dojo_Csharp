@@ -18,24 +18,21 @@ namespace UnitTestProject6
             frame.ForEach(x =>
             {
                 var f = new Frame(x);
-                var firstScore = f.FirstScore;
-                var secondScore = f.SecondScore;
-                var thirdScore = f.ThirdScore;
-                frameScore.Add(firstScore);
+                frameScore.Add(f.FirstScore);
                 if (preFrame != null && preFrame.IsSpare)
                 {
-                    frameScore.Add(firstScore + preFrame.SecondScore);
+                    frameScore.Add(f.FirstScore + preFrame.SecondScore);
                 }
 
                 if (f.IsSpare == false)
                 {
-                    frameScore.Add(secondScore);
+                    frameScore.Add(f.SecondScore);
                 }
 
                 if (x.Length == 3)
                 {
-                    frameScore.Add(thirdScore);
-                    frameScore.Add(thirdScore);
+                    frameScore.Add(f.ThirdScore);
+                    frameScore.Add(f.ThirdScore);
                 }
 
                 xCount += x.ToCharArray().Count(y => y.Equals('X'));
