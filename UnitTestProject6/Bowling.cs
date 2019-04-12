@@ -32,7 +32,7 @@ namespace UnitTestProject6
                 }
 
                 var secondBall = x.Substring(1, 1);
-                if (secondBall == "/")
+                if (f.IsSpare)
                 {
                     preSecondScore = secondScore;
                     hasBonus = true;

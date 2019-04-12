@@ -9,12 +9,15 @@ namespace UnitTestProject6
         public int SecondScore { get; set; }
         public int ThirdScore { get; set; }
 
+        public bool IsSpare { get; set; }
+
         public Frame(string input)
         {
             FirstScore = ScoreMap[input.Substring(0, 1)];
             var secondBall = input.Substring(1, 1);
             if (secondBall == "/")
             {
+                IsSpare = true;
                 SecondScore = 10 - FirstScore;
             }
             else
