@@ -26,7 +26,7 @@ namespace UnitTestProject6
                 if (preFrame != null && preFrame.IsSpare)
                 {
                     bonus = firstScore + preFrame.SecondScore;
-                    frameScore.Add(bonus);
+                    frameScore.Add(firstScore + preFrame.SecondScore);
                     bonus = 0;
                 }
 
