@@ -35,7 +35,8 @@ namespace UnitTestProject6
                     frameScore.Add(f.ThirdScore);
                 }
 
-                xCount += x.ToCharArray().Count(y => y.Equals('X'));
+                //xCount += x.ToCharArray().Count(y => y.Equals('X'));
+                if (f.IsStrike) xCount++;
                 preFrame = f;
             });
 
