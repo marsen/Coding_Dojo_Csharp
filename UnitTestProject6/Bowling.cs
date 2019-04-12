@@ -1,8 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization.Formatters;
-using System.Runtime.Versioning;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject6
 {
@@ -35,11 +32,9 @@ namespace UnitTestProject6
                     frameScore.Add(f.ThirdScore);
                 }
 
-                //xCount += x.ToCharArray().Count(y => y.Equals('X'));
                 if (f.IsStrike) xCount++;
                 preFrame = f;
             });
-
 
             if (xCount >= 10)
             {
