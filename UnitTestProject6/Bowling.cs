@@ -13,7 +13,6 @@ namespace UnitTestProject6
             var frameScore = new List<int>();
             var frame = input.Split(',').ToList();
             int xCount = 0;
-            int bonus = 0;
             int result = 0;
             Frame preFrame = null;
             frame.ForEach(x =>
@@ -25,9 +24,7 @@ namespace UnitTestProject6
                 frameScore.Add(firstScore);
                 if (preFrame != null && preFrame.IsSpare)
                 {
-                    bonus = firstScore + preFrame.SecondScore;
                     frameScore.Add(firstScore + preFrame.SecondScore);
-                    bonus = 0;
                 }
 
                 if (f.IsSpare == false)
