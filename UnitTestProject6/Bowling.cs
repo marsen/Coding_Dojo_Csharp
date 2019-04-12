@@ -16,7 +16,6 @@ namespace UnitTestProject6
             int bonus = 0;
             int result = 0;
             var hasBonus = false;
-            //var preSecondScore = 0;
             Frame preFrame = null;
             frame.ForEach(x =>
             {
@@ -25,7 +24,7 @@ namespace UnitTestProject6
                 var secondScore = f.SecondScore;
                 var thirdScore = f.ThirdScore;
                 frameScore.Add(firstScore);
-                if (hasBonus)
+                if (preFrame != null && preFrame.IsSpare)
                 {
                     bonus = firstScore + preFrame.SecondScore;
                     frameScore.Add(bonus);
