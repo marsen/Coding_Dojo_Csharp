@@ -31,7 +31,6 @@ namespace UnitTestProject6
                     bonus = 0;
                 }
 
-                var secondBall = x.Substring(1, 1);
                 if (f.IsSpare)
                 {
                     preSecondScore = secondScore;
